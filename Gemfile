@@ -29,6 +29,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+# external specs written by the teachers to test rails app
+gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]
+gem 'rails-controller-testing', group: [ :test ]
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
