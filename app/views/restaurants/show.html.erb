@@ -1,0 +1,21 @@
+<div class="card">
+  <h5 class="card-header"><%= @restaurant.name %></h5>
+  <div class="card-body">
+    <h5 class="card-title"><%= @restaurant.category %></h5>
+    <p class="card-text"><%= @restaurant.address %></p>
+    <%= link_to 'Go back', restaurants_path, class: "btn btn-primary" %>
+  </div>
+</div>
+<% @reviews.each do |review| %>
+    <div class="card">
+    <div class="card-header">
+        Stars: <%= review.rating %>/5
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+        <p><%= review.content %></p>
+        <!--<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>-->
+        </blockquote>
+    </div>
+    </div>
+<% end %>
