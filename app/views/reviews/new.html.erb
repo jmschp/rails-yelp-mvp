@@ -1,11 +1,4 @@
-<div class="card">
-  <h5 class="card-header"><%= @restaurant.name %></h5>
-  <div class="card-body">
-    <h5 class="card-title"><%= @restaurant.category %></h5>
-    <p class="card-text"><%= @restaurant.address %></p>
-    <%= link_to 'Go back', restaurants_path, class: "btn btn-primary" %>
-  </div>
-</div>
+<%= render('shared_partials/rest_card', restaurant: @restaurant) %>
 <hr>
 <%= simple_form_for([@restaurant, @review]) do |f| %>
     <%= f.input :rating, collection: RATES %>
